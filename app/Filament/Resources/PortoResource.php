@@ -46,17 +46,23 @@ class PortoResource extends Resource
                         FileUpload::make('laptop_image')
                             ->label('Tampilan Laptop')
                             ->image()
-                            ->directory('portfolio/laptop'),
+                            ->disk('public_uploads')
+                            ->directory('img/portfolio/laptop')
+                            ->visibility('public'),
                         
                         FileUpload::make('hp_image')
                             ->label('Tampilan Mobile')
                             ->image()
-                            ->directory('portfolio/mobile'),
+                            ->disk('public_uploads')
+                            ->directory('img/portfolio/mobile')
+                            ->visibility('public'),
                         
                         FileUpload::make('full_image')
                             ->label('Tampilan Full')
                             ->image()
-                            ->directory('portfolio/desktop'),
+                            ->disk('public_uploads')
+                            ->directory('img/portfolio/desktop')
+                            ->visibility('public'),
                     ]),
             ]);
     }
