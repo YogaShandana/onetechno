@@ -18,11 +18,10 @@
                 <!-- Portfolio Item {{ $porto->id }} -->
                 <div class="group {{ $porto->url ? 'cursor-pointer' : 'cursor-default' }} transition-all duration-300 hover:scale-102 relative" @if($porto->url) onclick="window.open('{{ $porto->url }}', '_blank')" @endif>
                     @if($porto->full_image)
-                        <img src="{{ file_exists(public_path('storage/' . $porto->full_image)) ? asset('storage/' . $porto->full_image) : asset('img/portfolio/' . $porto->full_image) }}" 
+                        <img src="{{ asset('img/portfolio/' . $porto->full_image) }}" 
                              alt="{{ $porto->title }}"
                              class="w-full h-full object-cover rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300"
-                             style="box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 -10px 20px -5px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05);"
-                             onerror="this.src='{{ asset('img/portfolio/' . $porto->full_image) }}'">
+                             style="box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 -10px 20px -5px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05);">
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg p-3">
                             <h3 class="text-white font-bold text-base sm:text-lg">{{ $porto->title }}</h3>
                         </div>
