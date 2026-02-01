@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+/* Scroll Container */
+.scroll-container {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.snap-section {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+/* Stacking order for overlay effect */
+#page-1 {
+    z-index: 1;
+}
+
+#page-2 {
+    z-index: 2;
+}
+
+#page-3 {
+    z-index: 3;
+}
+
+#page-4 {
+    z-index: 4;
+}
+
+/* Smooth transitions for scroll animations */
+.scroll-animate {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Initial hidden state for scroll animations */
+#page1-logo,
+#page1-content,
+#page2-content,
+#page2-image,
+#page3-images,
+#page4-title,
+#page4-grid {
+    opacity: 0;
+}
+
+/* Page 1 initial animations on load */
+#page1-logo {
+    animation: fade-in-up 1s ease-out 0.3s forwards;
+}
+
+#page1-content {
+    animation: fade-in-up 1s ease-out 0.5s forwards;
+}
+
+/* Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+/* Global styles */
+html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+}
