@@ -18,7 +18,7 @@
                 <!-- Portfolio Item {{ $porto->id }} -->
                 <div class="group {{ $porto->url ? 'cursor-pointer' : 'cursor-default' }} transition-all duration-300 hover:scale-102 relative" @if($porto->url) onclick="window.open('{{ $porto->url }}', '_blank')" @endif>
                     @if($porto->full_image)
-                        <img src="{{ asset('storage/' . $porto->full_image) }}" 
+                        <img src="{{ asset($porto->full_image) }}" 
                              alt="{{ $porto->title }}"
                              class="w-full h-full object-cover rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300"
                              style="box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 -10px 20px -5px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05);">

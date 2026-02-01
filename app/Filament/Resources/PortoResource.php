@@ -72,7 +72,8 @@ class PortoResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('laptop_image')
-                    ->label('Preview'),
+                    ->label('Preview')
+                    ->disk('public_uploads'),
                     
                 TextColumn::make('title')
                     ->label('Judul')

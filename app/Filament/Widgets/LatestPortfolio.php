@@ -22,6 +22,7 @@ class LatestPortfolio extends BaseWidget
             ->columns([
                 Tables\Columns\ImageColumn::make('laptop_image')
                     ->label('Preview')
+                    ->disk('public_uploads')
                     ->defaultImageUrl('/img/placeholder.jpg'),
                     
                 Tables\Columns\TextColumn::make('title')
