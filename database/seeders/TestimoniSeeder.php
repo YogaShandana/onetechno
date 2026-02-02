@@ -41,7 +41,7 @@ class TestimoniSeeder extends Seeder
                 'nama' => 'Nyoman Arya',
                 'nama_website' => 'Black Bali Paradise',
                 'komentar' => 'one techno berhasil bikin website yang sesuai brand kami. Keren!',
-                'rate' => 4,
+                'rate' => 5,
                 'is_active' => true
             ],
             [
