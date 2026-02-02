@@ -127,16 +127,16 @@ body {
         margin-top: -2rem !important;
     }
     
+    #page-3 {
+        padding-bottom: 7rem !important;
+    }
+    
     /* Page 4 adjustments */
     #page-4 {
         padding-top: 0.5rem;
     }
     
-    /* General mobile height fix */
-    .snap-section {
-        min-height: 100vh;
-        height: auto;
-    }
+
     
     /* Reduce step bar size on very small screens */
     @media (max-width: 640px) {
