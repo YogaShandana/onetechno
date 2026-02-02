@@ -1,6 +1,6 @@
 <!-- Page 4: All Portfolio Section -->
 <section id="page-4" class="min-h-screen w-full relative bg-white z-40">
-    <div class="w-full min-h-screen flex flex-col px-2 py-8 lg:py-16">
+    <div class="w-full min-h-screen flex flex-col px-2 py-8 pb-32 mb-16 sm:pb-8 sm:mb-0 lg:py-16">
         
         <!-- Title -->
         <div id="page4-title" class="text-center mb-3 lg:mb-16 pt-2 sm:pt-4 lg:pt-4 scroll-animate">
@@ -11,7 +11,7 @@
         </div>
 
         <!-- Portfolio Grid -->
-        <div id="page4-grid" class="w-full px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 lg:gap-8 scroll-animate">
+        <div id="page4-grid" class="w-full px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 lg:gap-8 scroll-animate" style="padding-bottom: 8rem; margin-bottom: 2rem;">
             
             @if(isset($portos) && $portos->count() > 0)
                 @foreach($portos as $porto)
