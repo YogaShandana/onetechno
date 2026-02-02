@@ -24,7 +24,7 @@
 <!-- Testimoni Popup Overlay -->
 <div id="testimoni-popup" class="fixed inset-0 z-[100] flex items-center justify-center invisible opacity-0 transition-all duration-500 bg-black/60 backdrop-blur-sm p-4 print:hidden">
     <!-- Popup Content -->
-    <div id="testimoni-content" class="bg-white w-full max-w-2xl h-[90vh] rounded-3xl shadow-2xl overflow-y-auto transform scale-95 transition-all duration-500 relative flex flex-col">
+    <div id="testimoni-content" class="bg-white w-full max-w-2xl max-h-[80vh] rounded-3xl shadow-2xl overflow-hidden transform scale-95 transition-all duration-500 relative flex flex-col">
         
         <!-- Header -->
         <div class="bg-[#FFC107] p-6 sm:p-8 flex items-center justify-between sticky top-0 z-10">
@@ -38,8 +38,7 @@
         </div>
 
         <!-- Seluruh Konten Popup Scrollable -->
-
-        <div class="p-6 sm:p-8 flex-1 overflow-y-auto custom-scrollbar flex flex-col items-center w-full">
+        <div class="p-6 sm:p-8 overflow-y-auto max-h-[calc(80vh-88px)] custom-scrollbar flex flex-col items-center w-full">
             <div class="relative w-full flex flex-col items-center justify-center gap-2">
                 <div class="testimoni-slider w-full max-w-lg">
                     @if(isset($testimonis) && $testimonis->count() > 0)
