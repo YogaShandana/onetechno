@@ -49,15 +49,15 @@
                                         @endif
                                     </div>
                                     
-                                    <!-- Mobile View -->
-                                    <div class="flex-1 max-w-xs">
+                                    <!-- Mobile View - Hidden on mobile screens, only shown on lg and above -->
+                                    <div class="hidden lg:flex flex-1 max-w-xs">
                                         @if($porto->hp_image)
                                             <img src="{{ asset($porto->hp_image) }}" 
                                                  alt="{{ $porto->title }} - Mobile"
-                                                 class="w-4/5 sm:w-full h-auto max-h-[350px] sm:max-h-[400px] lg:max-h-[500px] object-contain rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 {{ $porto->url ? 'cursor-pointer' : 'cursor-default' }} mx-auto group-hover:scale-105"
+                                                 class="w-full h-auto max-h-[500px] object-contain rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 {{ $porto->url ? 'cursor-pointer' : 'cursor-default' }} mx-auto group-hover:scale-105"
                                                  @if($porto->url) onclick="window.open('{{ $porto->url }}', '_blank')" @endif>
                                         @else
-                                            <div class="w-4/5 sm:w-full aspect-[9/16] max-h-[350px] sm:max-h-[400px] lg:max-h-[500px] bg-gray-300 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center mx-auto group-hover:scale-105">
+                                            <div class="w-full aspect-[9/16] max-h-[500px] bg-gray-300 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center mx-auto group-hover:scale-105">
                                                 <span class="text-gray-600 text-lg">{{ $porto->title ?? 'No Mobile Image' }}</span>
                                             </div>
                                         @endif
