@@ -19,35 +19,35 @@ class TestimoniSeeder extends Seeder
             [
                 'nama' => 'Sari Pratama',
                 'nama_website' => 'Intimas Surya',
-                'komentar' => 'Puas banget sama hasil kerjanya OneTechno. Website jadi lebih menarik dan modern!',
+                'komentar' => 'Puas banget sama hasil kerjanya one techno. Website jadi lebih menarik dan modern!',
                 'rate' => 5,
                 'is_active' => true
             ],
             [
                 'nama' => 'Made Wijaya',
                 'nama_website' => 'Bali To Your Door Step',
-                'komentar' => 'Website tour kami sekarang keren abis! OneTechno emang jago bikin website.',
+                'komentar' => 'Website tour kami sekarang keren abis! one techno emang jago bikin website.',
                 'rate' => 5,
                 'is_active' => true
             ],
             [
                 'nama' => 'Yuki Tanaka',
                 'nama_website' => 'Maguro Ubud',
-                'komentar' => 'Hasil website restoran kami bagus banget! OneTechno mantap deh.',
+                'komentar' => 'Hasil website restoran kami bagus banget! one techno mantap deh.',
                 'rate' => 5,
                 'is_active' => true
             ],
             [
                 'nama' => 'Nyoman Arya',
                 'nama_website' => 'Black Bali Paradise',
-                'komentar' => 'OneTechno berhasil bikin website yang sesuai brand kami. Keren!',
+                'komentar' => 'one techno berhasil bikin website yang sesuai brand kami. Keren!',
                 'rate' => 4,
                 'is_active' => true
             ],
             [
                 'nama' => 'Alex Lim',
                 'nama_website' => 'Prestige Investment Global Group',
-                'komentar' => 'Website investment kami sekarang lebih professional. OneTechno recommended!',
+                'komentar' => 'Website investment kami sekarang lebih professional. one techno recommended!',
                 'rate' => 5,
                 'is_active' => true
             ],

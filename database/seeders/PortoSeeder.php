@@ -96,6 +96,16 @@ class PortoSeeder extends Seeder
                 'is_active' => true,
                 'order' => 8
             ],
+            [
+                'title' => 'Kos Management',
+                'url' => '',
+                'laptop_image' => 'img/portfolio/laptop/01KGES3WQ37GBYMKDZ1WVPK5W9.webp',
+                'hp_image' => 'img/portfolio/mobile/01KGES3WQ4FNJBS5KNA2TCNHY9.webp',
+                'full_image' => 'img/portfolio/desktop/01KGES3WQ4FNJBS5KNA2TCNHYA.webp',
+                'is_featured' => false,
+                'is_active' => true,
+                'order' => 9
+            ],
         ];
 
         foreach ($portfolios as $portfolio) {
