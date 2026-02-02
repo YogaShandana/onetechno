@@ -3,7 +3,7 @@
     <div class="w-full min-h-screen flex flex-col px-2 py-8 lg:py-16">
         
         <!-- Title -->
-        <div id="page4-title" class="text-center mb-3 lg:mb-16 pt-2 lg:pt-4 scroll-animate">
+        <div id="page4-title" class="text-center mb-3 lg:mb-16 pt-2 sm:pt-4 lg:pt-4 scroll-animate">
             <h1 class="text-black text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-wider page4-title"
                 data-text-id="PORTOFOLIO" data-text-en="PORTFOLIO">
                 PORTOFOLIO
