@@ -12,7 +12,7 @@
             <!-- Right Side: Content -->
             <div id="page1-content" class="text-center flex flex-col items-center w-full lg:w-auto scroll-animate relative">
                 <!-- Language Switcher - Top Right -->
-                <div class="flex items-center gap-2 mb-4 bg-gray-100 p-1 rounded-full">
+                <div class="language-switcher flex items-center gap-2 mb-4 bg-gray-100 p-1 rounded-full">
                     <button id="btn-indonesia" class="text-[10px] font-bold px-3 py-1 rounded-full bg-yellow-500 text-black transition-all duration-300">IND</button>
                     <button id="btn-english" class="text-[10px] font-bold px-3 py-1 rounded-full text-black hover:bg-gray-200 transition-all duration-300">ENG</button>
                 </div>

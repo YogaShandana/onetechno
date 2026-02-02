@@ -174,9 +174,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (scrollPosition + windowHeight > page2Top && scrollPosition < page2Bottom) {
                     const scrollFromPage2Top = scrollPosition - page2Top;
-                    const page2Progress = Math.max(0, Math.min(1, (scrollFromPage2Top + windowHeight) / (windowHeight * 1.5)));
+                    // Make animation more immediate and responsive
+                    const page2Progress = Math.max(0, Math.min(1, (scrollFromPage2Top + windowHeight * 0.5) / windowHeight));
 
-                    const opacity = Math.min(1, page2Progress * 2.5);
+                    const opacity = Math.max(0.3, Math.min(1, page2Progress * 1.5)); // Start with some opacity
                     const isMobile = window.innerWidth < 1024;
 
                     if (isMobile) {
@@ -185,11 +186,19 @@ document.addEventListener('DOMContentLoaded', function () {
                         page2Image.style.opacity = opacity;
                         page2Image.style.transform = 'none';
                     } else {
-                        const translateX = (1 - page2Progress) * -150;
+                        const translateX = (1 - page2Progress) * -75; // Reduced animation distance
                         page2Content.style.opacity = opacity;
                         page2Content.style.transform = `translateX(${translateX}px)`;
                         page2Image.style.opacity = opacity;
                         page2Image.style.transform = `translateX(${-translateX}px)`;
+                    }
+                } else {
+                    // Make content visible even when not in perfect scroll range
+                    if (scrollPosition + windowHeight > page2Top - windowHeight * 0.3) {
+                        page2Content.style.opacity = '1';
+                        page2Content.style.transform = 'none';
+                        page2Image.style.opacity = '1';
+                        page2Image.style.transform = 'none';
                     }
                 }
             }
@@ -200,10 +209,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 const page3Bottom = page3Top + page3.offsetHeight;
 
                 if (scrollPosition + windowHeight > page3Top && scrollPosition < page3Bottom) {
-                    const page3Progress = Math.max(0, Math.min(1, (scrollPosition - page3Top + windowHeight) / (windowHeight * 1.5)));
-                    const opacity = Math.min(1, page3Progress * 2.5);
-                    const scale = 0.85 + (page3Progress * 0.15);
-                    const translateY = (1 - page3Progress) * 70;
+                    // Make animation more immediate
+                    const page3Progress = Math.max(0, Math.min(1, (scrollPosition - page3Top + windowHeight * 0.7) / windowHeight));
+                    const opacity = Math.max(0.4, Math.min(1, page3Progress * 1.5)); // Start with some opacity
+                    const scale = 0.9 + (page3Progress * 0.1); // Less dramatic scaling
+                    const translateY = (1 - page3Progress) * 30; // Reduced animation distance
 
                     // Animate title (with inline styles)
                     const titleElement = document.querySelector('#page-3 .scroll-animate:first-child');
@@ -215,6 +225,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Animate portfolio images
                     page3Images.style.opacity = opacity;
                     page3Images.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                } else {
+                    // Make content visible even when not in perfect scroll range
+                    if (scrollPosition + windowHeight > page3Top - windowHeight * 0.3) {
+                        const titleElement = document.querySelector('#page-3 .scroll-animate:first-child');
+                        if (titleElement) {
+                            titleElement.style.opacity = '1';
+                            titleElement.style.transform = 'none';
+                        }
+                        page3Images.style.opacity = '1';
+                        page3Images.style.transform = 'none';
+                    }
                 }
             }
 
@@ -225,22 +246,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 const distanceFromTop = scrollPosition - page4Top + windowHeight;
 
                 if (scrollPosition + windowHeight > page4Top && scrollPosition < page4Bottom) {
-                    // Title animation
-                    const titleProgress = Math.max(0, Math.min(1, (distanceFromTop - windowHeight * 0.2) / (windowHeight * 0.7)));
-                    const titleOpacity = Math.min(1, titleProgress * 2);
-                    const titleTranslateY = (1 - titleProgress) * 100;
+                    // Title animation - more immediate
+                    const titleProgress = Math.max(0, Math.min(1, distanceFromTop / windowHeight));
+                    const titleOpacity = Math.max(0.3, Math.min(1, titleProgress * 1.5)); // Start with some opacity
+                    const titleTranslateY = (1 - titleProgress) * 50; // Reduced animation distance
 
                     page4Title.style.opacity = titleOpacity;
                     page4Title.style.transform = `translateY(${titleTranslateY}px)`;
 
-                    // Grid animation
-                    const gridProgress = Math.max(0, Math.min(1, (distanceFromTop - windowHeight * 0.4) / (windowHeight * 0.7)));
-                    const gridOpacity = Math.min(1, gridProgress * 2);
-                    const gridTranslateY = (1 - gridProgress) * 120;
-                    const gridScale = 0.9 + (gridProgress * 0.1);
+                    // Grid animation - more immediate
+                    const gridProgress = Math.max(0, Math.min(1, (distanceFromTop - windowHeight * 0.1) / windowHeight));
+                    const gridOpacity = Math.max(0.3, Math.min(1, gridProgress * 1.5)); // Start with some opacity
+                    const gridTranslateY = (1 - gridProgress) * 60; // Reduced animation distance
+                    const gridScale = 0.95 + (gridProgress * 0.05); // Less dramatic scaling
 
                     page4Grid.style.opacity = gridOpacity;
                     page4Grid.style.transform = `translateY(${gridTranslateY}px) scale(${gridScale})`;
+                } else {
+                    // Make content visible even when not in perfect scroll range
+                    if (scrollPosition + windowHeight > page4Top - windowHeight * 0.3) {
+                        page4Title.style.opacity = '1';
+                        page4Title.style.transform = 'none';
+                        page4Grid.style.opacity = '1';
+                        page4Grid.style.transform = 'none';
+                    }
                 }
             }
         });
