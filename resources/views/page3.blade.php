@@ -1,6 +1,6 @@
 <!-- Page 3: Portfolio Section -->
 <section id="page-3" class="h-screen w-full relative overflow-hidden bg-black flex items-center justify-center snap-section">
-    <div class="w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-20 py-8 sm:py-0 relative -mt-8 sm:-mt-12 lg:-mt-20">
+    <div class="w-full h-full flex flex-col items-center px-4 sm:px-6 lg:px-20 py-8 sm:py-0 relative -mt-8 sm:-mt-12 lg:-mt-20">
         
         <!-- Title and Description - FORCE VISIBLE -->
         <div class="text-center mb-8 w-full scroll-animate" style="z-index: 9999; position: relative; background: rgba(0,0,0,0.8); padding: 20px; border-radius: 10px;">

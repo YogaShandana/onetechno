@@ -2,7 +2,7 @@
 <section id="page-1" class="h-screen w-full relative flex flex-col overflow-hidden snap-section">
     <!-- Main Content Area -->
     <div class="flex-grow flex items-center justify-center w-full px-6 sm:px-8 lg:px-20">
-        <div class="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl gap-8 sm:gap-12 lg:gap-24">
+        <div class="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl sm:gap-12 lg:gap-24">
             
             <!-- Left Side: Logo -->
             <div id="page1-logo" class="flex-shrink-0 -mt-28 sm:-mt-20 lg:mt-0 scroll-animate">
