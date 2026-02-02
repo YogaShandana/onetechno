@@ -4,10 +4,10 @@
     <div class="w-full h-full grid grid-cols-1 lg:grid-cols-2">
         
         <!-- Left Grid: Content -->
-        <div id="page2-content" class="flex flex-col justify-center items-center lg:items-start px-6 lg:pl-32 relative z-20 h-full mt-4 sm:mt-6 lg:mt-0 scroll-animate">
+        <div id="page2-content" class="flex flex-col justify-center items-center lg:items-start px-6 lg:pl-32 relative z-20 h-full mt-8 lg:mt-0 scroll-animate">
           
             <!-- Step Bar (Arrows) -->
-            <div class="flex items-center w-full max-w-lg mb-4 sm:mb-6 lg:mb-10 filter drop-shadow-xl">
+            <div class="flex items-center w-full max-w-lg mb-8 lg:mb-10 filter drop-shadow-xl">
                 <!-- Step 1: Terpercaya -->
                 <div id="step-terpercaya" class="h-12 lg:h-16 flex-1 bg-black text-white flex items-center justify-center font-bold tracking-wider relative z-30 text-xs sm:text-sm pl-2 cursor-pointer hover:opacity-80 transition-all duration-300 page2-step" 
                      style="clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);"
