@@ -129,16 +129,19 @@ body {
     
     #page-3 {
         height: auto !important;
-        min-height: 100vh;
-        padding-bottom: 8rem !important;
+        min-height: 100vh !important;
+        max-height: none !important;
+        padding-bottom: 10rem !important;
         overflow-y: auto !important;
+        overflow-x: hidden !important;
     }
     
     #page-3 .w-full.h-full {
         height: auto !important;
-        min-height: calc(100vh - 8rem);
-        justify-content: space-between !important;
-        padding: 2rem 0;
+        min-height: auto !important;
+        justify-content: flex-start !important;
+        padding: 3rem 0 6rem 0 !important;
+        gap: 3rem !important;
     }
     
     /* Page 4 adjustments */
