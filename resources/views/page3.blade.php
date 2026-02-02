@@ -1,6 +1,6 @@
 <!-- Page 3: Portfolio Section -->
 <section id="page-3" class="h-screen lg:h-screen w-full relative bg-black flex items-center justify-center snap-section" style="overflow-y: auto; min-height: 100vh;">
-    <div class="w-full h-full flex flex-col items-center justify-center sm:px-6 lg:px-20 sm:py-0 relative -mt-8 sm:-mt-12 lg:-mt-20" style="min-height: 100vh; padding-bottom: 6rem;">
+    <div class="w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-20 py-8 sm:py-0 relative -mt-8 sm:-mt-12 lg:-mt-20" style="min-height: 100vh; padding-bottom: 6rem;">
         
         <!-- Title and Description - FORCE VISIBLE -->
         <div class="text-center mb-8 w-full scroll-animate" style="z-index: 9999; position: relative; background: rgba(0,0,0,0.8); padding: 20px; border-radius: 10px;">
@@ -34,9 +34,9 @@
                         @foreach($portos as $index => $porto)
                             <div class="porto-slide w-full flex-shrink-0 relative group {{ $index > 0 ? 'hidden' : '' }}" data-porto-id="{{ $porto->id }}">
                                 <!-- Both Views Side by Side -->
-                                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+                                <div class="flex flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-12">
                                     <!-- Laptop/Desktop View -->
-                                    <div class="flex-1 max-w-3xl">
+                                    <div class="flex-1 max-w-lg lg:max-w-3xl">
                                         @if($porto->laptop_image)
                                             <img src="{{ asset($porto->laptop_image) }}" 
                                                  alt="{{ $porto->title }} - Desktop"
@@ -44,21 +44,21 @@
                                                  @if($porto->url) onclick="window.open('{{ $porto->url }}', '_blank')" @endif>
                                         @else
                                             <div class="w-full aspect-video bg-gray-300 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center group-hover:scale-105">
-                                                <span class="text-gray-600 text-lg">{{ $porto->title ?? 'No Desktop Image' }}</span>
+                                                <span class="text-gray-600 text-sm lg:text-lg">{{ $porto->title ?? 'No Desktop Image' }}</span>
                                             </div>
                                         @endif
                                     </div>
                                     
-                                    <!-- Mobile View - Hidden on mobile screens, only shown on lg and above -->
-                                    <div class="hidden lg:flex flex-1 max-w-xs">
+                                    <!-- Mobile View -->
+                                    <div class="flex-shrink-0 max-w-[120px] sm:max-w-[150px] lg:max-w-xs">
                                         @if($porto->hp_image)
                                             <img src="{{ asset($porto->hp_image) }}" 
                                                  alt="{{ $porto->title }} - Mobile"
-                                                 class="w-full h-auto max-h-[500px] object-contain rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 {{ $porto->url ? 'cursor-pointer' : 'cursor-default' }} mx-auto group-hover:scale-105"
+                                                 class="w-full h-auto max-h-[200px] sm:max-h-[250px] lg:max-h-[500px] object-contain rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 {{ $porto->url ? 'cursor-pointer' : 'cursor-default' }} group-hover:scale-105"
                                                  @if($porto->url) onclick="window.open('{{ $porto->url }}', '_blank')" @endif>
                                         @else
-                                            <div class="w-full aspect-[9/16] max-h-[500px] bg-gray-300 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center mx-auto group-hover:scale-105">
-                                                <span class="text-gray-600 text-lg">{{ $porto->title ?? 'No Mobile Image' }}</span>
+                                            <div class="w-full aspect-[9/16] max-h-[200px] sm:max-h-[250px] lg:max-h-[500px] bg-gray-300 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center group-hover:scale-105">
+                                                <span class="text-gray-600 text-xs sm:text-sm lg:text-lg">{{ $porto->title ?? 'No Mobile Image' }}</span>
                                             </div>
                                         @endif
                                     </div>
