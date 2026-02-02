@@ -128,7 +128,17 @@ body {
     }
     
     #page-3 {
-        padding-bottom: 7rem !important;
+        height: auto !important;
+        min-height: 100vh;
+        padding-bottom: 8rem !important;
+        overflow-y: auto !important;
+    }
+    
+    #page-3 .w-full.h-full {
+        height: auto !important;
+        min-height: calc(100vh - 8rem);
+        justify-content: space-between !important;
+        padding: 2rem 0;
     }
     
     /* Page 4 adjustments */
@@ -148,6 +158,15 @@ body {
         #page2-desc {
             font-size: 0.875rem;
             line-height: 1.4;
+        }
+        
+        /* Page 3 mobile specific */
+        #page-3 .text-center.mb-8 {
+            margin-bottom: 2rem !important;
+        }
+        
+        #page-3 #page3-images {
+            margin-bottom: 2rem !important;
         }
         
         /* Smaller text on page 3 */
