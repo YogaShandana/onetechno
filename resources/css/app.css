@@ -87,3 +87,31 @@ html {
 body {
     overflow: hidden;
 }
+
+/* Mobile responsive adjustments for portfolio images */
+@media (max-width: 768px) {
+    /* Make laptop images smaller on mobile */
+    .porto-slide .flex-1.max-w-3xl img,
+    .porto-slide .flex-1.max-w-3xl > div {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    /* Make mobile phone images smaller on mobile */
+    .porto-slide .flex-1.max-w-xs img,
+    .porto-slide .flex-1.max-w-xs > div {
+        max-width: 140px;
+        max-height: 250px;
+        margin: 0 auto;
+    }
+    
+    /* Adjust gap between laptop and phone images on mobile */
+    .porto-slide .flex.flex-col {
+        gap: 1rem;
+    }
+    
+    /* Scale down hover effects on mobile */
+    .porto-slide .group:hover .group-hover\:scale-105 {
+        transform: scale(1) !important;
+    }
+}
