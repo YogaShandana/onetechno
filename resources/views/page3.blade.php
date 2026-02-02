@@ -35,13 +35,14 @@
                             <div class="porto-slide w-full flex-shrink-0 relative group {{ $index > 0 ? 'hidden' : '' }}" data-porto-id="{{ $porto->id }}">
                                 <!-- Both Views Side by Side -->
                                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-12">
-                                    <!-- Laptop/Desktop View -->
-                                    <div class="flex-1 w-full sm:w-auto sm:max-w-md lg:max-w-3xl">
+                                    <!-- Laptop/Desktop View - Hidden on mobile, visible from tablet and up -->
+                                    <div class="laptop-image w-full sm:w-auto sm:max-w-md" style="max-width: 650px;">
                                         @if($porto->laptop_image)
                                             <img src="{{ asset($porto->laptop_image) }}" 
                                                  alt="{{ $porto->title }} - Desktop"
                                                  class="w-full h-auto object-cover rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 {{ $porto->url ? 'cursor-pointer' : 'cursor-default' }} group-hover:scale-105"
-                                                 @if($porto->url) onclick="window.open('{{ $porto->url }}', '_blank')" @endif>
+                                                 @if($porto->url) onclick="window.open('{{ $porto->url }}', '_blank')" @endif
+                                                 style="max-width: 100%;">
                                         @else
                                             <div class="w-full aspect-video bg-gray-300 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center group-hover:scale-105">
                                                 <span class="text-gray-600 text-lg">{{ $porto->title ?? 'No Desktop Image' }}</span>
@@ -49,15 +50,22 @@
                                         @endif
                                     </div>
                                     
-                                    <!-- Mobile View - Hidden on mobile, visible from tablet and up -->
-                                    <div class="hidden sm:flex flex-1 w-full sm:w-auto sm:max-w-[200px] lg:max-w-xs">
+                                    <!-- Mobile View - Hidden on mobile, visible from laptop and up -->
+                                    <div class="mobile-phone-image" style="flex-shrink: 0; width: auto; max-width: 200px; display: none;">
+                                        <style>
+                                            @media (min-width: 1024px) {
+                                                .mobile-phone-image {
+                                                    display: block !important;
+                                                }
+                                            }
+                                        </style>
                                         @if($porto->hp_image)
                                             <img src="{{ asset($porto->hp_image) }}" 
                                                  alt="{{ $porto->title }} - Mobile"
-                                                 class="w-full sm:w-full h-auto max-h-[300px] sm:max-h-[350px] lg:max-h-[500px] object-contain rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 {{ $porto->url ? 'cursor-pointer' : 'cursor-default' }} mx-auto group-hover:scale-105"
+                                                 class="w-full h-auto max-h-[300px] sm:max-h-[350px] lg:max-h-[500px] object-contain rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 {{ $porto->url ? 'cursor-pointer' : 'cursor-default' }} mx-auto group-hover:scale-105"
                                                  @if($porto->url) onclick="window.open('{{ $porto->url }}', '_blank')" @endif>
                                         @else
-                                            <div class="w-full sm:w-full aspect-[9/16] max-h-[300px] sm:max-h-[350px] lg:max-h-[500px] bg-gray-300 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center mx-auto group-hover:scale-105">
+                                            <div class="w-full aspect-[9/16] max-h-[300px] sm:max-h-[350px] lg:max-h-[500px] bg-gray-300 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center mx-auto group-hover:scale-105">
                                                 <span class="text-gray-600 text-lg">{{ $porto->title ?? 'No Mobile Image' }}</span>
                                             </div>
                                         @endif

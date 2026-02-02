@@ -78,6 +78,26 @@
     opacity: 0;
 }
 
+/* Page 3 - Show laptop on mobile, hide phone */
+.laptop-image {
+    display: block !important;
+}
+
+.mobile-phone-image {
+    display: none !important;
+}
+
+/* Page 3 - Show both images on tablet and desktop */
+@media (min-width: 640px) {
+    .laptop-image {
+        display: block !important;
+    }
+    
+    .mobile-phone-image {
+        display: block !important;
+    }
+}
+
 /* Global styles */
 html {
     scroll-behavior: smooth;

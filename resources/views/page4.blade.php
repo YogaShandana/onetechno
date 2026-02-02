@@ -11,7 +11,7 @@
         </div>
 
         <!-- Portfolio Grid -->
-        <div id="page4-grid" class="w-full px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 lg:gap-8 scroll-animate" style="padding-bottom: 8rem; margin-bottom: 2rem;">
+        <div id="page4-grid" class="w-full px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 lg:gap-8 scroll-animate" style="padding-bottom: 4rem; margin-bottom: 1rem;">
             
             @if(isset($portos) && $portos->count() > 0)
                 @foreach($portos as $porto)
